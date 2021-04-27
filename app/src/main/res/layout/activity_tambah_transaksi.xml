@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="#8C52FF"
+            android:background="@drawable/rounded_button"
             android:text="@string/pemasukan">
         </Button>
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="#8C52FF"
+            android:background="@drawable/rounded_button"
             android:text="@string/pengeluaran">
         </Button>
 

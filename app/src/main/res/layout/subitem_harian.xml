@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    app:layout_constraintCircleRadius="5dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintCircleRadius="5dp"
+    android:padding="12dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -14,23 +15,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/card_view_border"
-            android:backgroundTintMode="add">
+            android:background="#545454">
 
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/tahun"
+                    android:id="@+id/kategori"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="tahun"
+                    android:text="kategori"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="18sp">
+                    android:textSize="14sp">
                 </TextView>
 
             </RelativeLayout>
@@ -38,17 +37,16 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/jumlahPemasukan"
+                    android:id="@+id/keterangan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="pemasukan"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:text="keterangan"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="18sp">
+                    android:textSize="14sp">
                 </TextView>
 
             </RelativeLayout>
@@ -56,17 +54,16 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/jumlahPengeluaran"
+                    android:id="@+id/jumlah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="pengeluaran"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:text="jumlah"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="18sp">
+                    android:textSize="14sp">
                 </TextView>
 
             </RelativeLayout>

@@ -1,37 +1,49 @@
 package com.android.mybookkeeping.recyclerview;
 
+import java.util.List;
+
 public class Harian {
-    private String kategori;
-    private String keterangan;
-    private String jumlah;
+    private String tanggal;
+    private String pemasukan;
+    private String pengeluaran;
+    private List<SubHarian> subHarianList;
 
-    public Harian(String kategori, String keterangan, String jumlah) {
-        this.kategori = kategori;
-        this.keterangan = keterangan;
-        this.jumlah = jumlah;
+    public Harian(String tanggal, String pemasukan, String pengeluaran, List<SubHarian> subHarianList) {
+        this.tanggal = tanggal;
+        this.pemasukan = pemasukan;
+        this.pengeluaran = pengeluaran;
+        this.subHarianList = subHarianList;
     }
 
-    public String getKategori() {
-        return kategori;
+    public String getTanggal() {
+        return tanggal;
     }
 
-    public void setKategori(String kategori) {
-        this.kategori = kategori;
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
     }
 
-    public String getKeterangan() {
-        return keterangan;
+    public String getPemasukan() {
+        return pemasukan;
     }
 
-    public void setKeterangan(String keterangan) {
-        this.keterangan = keterangan;
+    public void setPemasukan(String pemasukan) {
+        this.pemasukan = pemasukan;
     }
 
-    public String getJumlah() {
-        return jumlah;
+    public String getPengeluaran() {
+        return pengeluaran;
     }
 
-    public void setJumlah(String jumlah) {
-        this.jumlah = jumlah;
+    public void setPengeluaran(String pengeluaran) {
+        this.pengeluaran = pengeluaran;
+    }
+
+    public List<SubHarian> getSubHarianList() {
+        return subHarianList;
+    }
+
+    public void setSubHarianList(List<SubHarian> subHarianList) {
+        this.subHarianList = subHarianList;
     }
 }

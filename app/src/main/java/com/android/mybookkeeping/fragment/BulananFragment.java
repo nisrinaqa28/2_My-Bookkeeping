@@ -2,15 +2,12 @@ package com.android.mybookkeeping.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.android.mybookkeeping.recyclerview.Bulanan;
 import com.android.mybookkeeping.recyclerview.BulananAdapter;
 import com.android.mybookkeeping.R;
@@ -63,7 +60,7 @@ public class BulananFragment extends Fragment {
 
     public void getData(){
         bulananArrayList = new ArrayList<>();
-        bulananArrayList.add(new Bulanan("April","Rp 5.000.000","Rp 1.270.000"));
+        bulananArrayList.add(new Bulanan("April","Rp 5.000.000","Rp 1.200.000"));
         bulananArrayList.add(new Bulanan("Maret","Rp 0","Rp 0"));
         bulananArrayList.add(new Bulanan("Februari","Rp 0","Rp 0"));
         bulananArrayList.add(new Bulanan("Januari","Rp 0","Rp 0"));

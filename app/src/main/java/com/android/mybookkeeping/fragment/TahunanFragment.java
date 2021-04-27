@@ -65,6 +65,6 @@ public class TahunanFragment extends Fragment {
 
     public void getData(){
         tahunanArrayList = new ArrayList<>();
-        tahunanArrayList.add(new Tahunan("2021","Rp 5.000.000","Rp 1.270.000"));
+        tahunanArrayList.add(new Tahunan("2021","Rp 5.000.000","Rp 1.200.000"));
     }
 }
