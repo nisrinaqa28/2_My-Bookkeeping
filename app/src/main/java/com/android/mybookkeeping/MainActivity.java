@@ -16,7 +16,6 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
     TabLayout tabLayout;
     FrameLayout frameLayout;
 
@@ -31,27 +30,18 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Bulanan"));
         tabLayout.addTab(tabLayout.newTab().setText("Tahunan"));
 
+        replaceFragment(new HarianFragment());
+
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                Fragment fragment = null;
-                switch (tab.getPosition()){
-                    case 0:
-                        fragment = new HarianFragment();
-                        break;
-                    case 1:
-                        fragment = new BulananFragment();
-                        break;
-                    case 2:
-                        fragment = new TahunanFragment();
-                        break;
+                if (tab.getPosition() == 0) {
+                    replaceFragment(new HarianFragment());
+                } else if (tab.getPosition() == 1) {
+                    replaceFragment(new BulananFragment());
+                } else {
+                    replaceFragment(new TahunanFragment());
                 }
-
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.simpleFrameLayout, fragment);
-                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                fragmentTransaction.commit();
             }
 
             @Override
@@ -64,5 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void replaceFragment (Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.simpleFrameLayout, fragment);
+        fragmentTransaction.commit();
     }
 }
