@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RadioButton;
 
 import com.android.mybookkeeping.fragment.HarianFragment;
 import com.android.mybookkeeping.fragment.PemasukanFragment;
@@ -17,7 +18,7 @@ import com.android.mybookkeeping.fragment.PengeluaranFragment;
 
 public class TambahTransaksi extends AppCompatActivity {
 
-    private Button pemasukanButton, pengeluaranButton;
+    RadioButton pemasukanButton, pengeluaranButton;
     FrameLayout frameLayout;
 
     @Override
@@ -34,20 +35,6 @@ public class TambahTransaksi extends AppCompatActivity {
         pengeluaranButton = findViewById(R.id.pengeluaranButton);
 
         replaceFragment(new PemasukanFragment());
-
-        pemasukanButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                replaceFragment(new PemasukanFragment());
-            }
-        });
-
-        pengeluaranButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                replaceFragment(new PengeluaranFragment());
-            }
-        });
     }
 
     private void replaceFragment (Fragment fragment) {
@@ -55,5 +42,21 @@ public class TambahTransaksi extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment);
         fragmentTransaction.commit();
+    }
+
+    public void onRadioButtonClicked (View view){
+        boolean isSelected = ((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.pemasukanButton:
+                if (isSelected){
+                    replaceFragment(new PemasukanFragment());
+                }
+                break;
+            case R.id.pengeluaranButton:
+                if (isSelected){
+                    replaceFragment(new PengeluaranFragment());
+                }
+                break;
+        }
     }
 }

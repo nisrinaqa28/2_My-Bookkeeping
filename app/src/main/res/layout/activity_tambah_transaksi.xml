@@ -22,33 +22,41 @@
             app:layout_scrollFlags="scroll|enterAlways" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="30dp"
         android:background="#545454">
 
-        <Button
+        <RadioButton
             android:id="@+id/pemasukanButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_button"
-            android:text="@string/pemasukan">
-        </Button>
+            android:textColor="@color/white"
+            android:text="PEMASUKAN"
+            android:textAlignment="center"
+            android:checked="true"
+            android:button="@android:color/transparent"
+            android:background="@drawable/radio_button_pemasukan_selector"
+            android:onClick="onRadioButtonClicked"/>
 
-        <Button
+        <RadioButton
             android:id="@+id/pengeluaranButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_button"
-            android:text="@string/pengeluaran">
-        </Button>
+            android:textColor="@color/white"
+            android:text="PENGELUARAN"
+            android:textAlignment="center"
+            android:checked="false"
+            android:button="@android:color/transparent"
+            android:background="@drawable/radio_button_pengeluaran_selector"
+            android:onClick="onRadioButtonClicked"/>
 
-    </LinearLayout>
+    </RadioGroup>
 
     <FrameLayout
         android:id="@+id/container"

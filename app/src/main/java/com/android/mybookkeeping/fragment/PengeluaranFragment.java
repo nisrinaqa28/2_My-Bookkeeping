@@ -15,6 +15,8 @@ import android.widget.Spinner;
 
 import com.android.mybookkeeping.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class PengeluaranFragment extends Fragment {
@@ -56,11 +58,16 @@ public class PengeluaranFragment extends Fragment {
         });
 
         spinner = view.findViewById(R.id.kategoriInput);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(PengeluaranFragment.this.getContext(), R.array.spinnerPengeluaran, R.layout.color_spinner_layout);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        String[] value = {"Asuransi","Bayi","Belanja","Buah-buahan","Cemilan","Elektronik",
+                "Hadiah","Hewan Peliharaan","Hiburan","Kantor","Kecantikan","Kesehatan",
+                "Lain-lain","Makanan","Mobil","Motor","Olahraga","Pajak","Pakaian","Pendidikan",
+                "Pulsa","Rokok","Rumah","Sosial","Tagihan","Taksi","Transportasi"};
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(value));
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(PengeluaranFragment.this.getContext(),R.layout.style_spinner,arrayList);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        spinner.setAdapter(arrayAdapter);
 
-        editJumlah = view.findViewById(R.id.editTextNumberDecimal);
+        editJumlah = view.findViewById(R.id.editTextNumber);
         editKeterangan = view.findViewById(R.id.keteranganInput);
 
         simpanBtn = view.findViewById(R.id.simpanButton);

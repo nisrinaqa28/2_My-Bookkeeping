@@ -14,6 +14,8 @@ import android.widget.Spinner;
 
 import com.android.mybookkeeping.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class PemasukanFragment extends Fragment {
@@ -55,11 +57,14 @@ public class PemasukanFragment extends Fragment {
         });
 
         spinner = view.findViewById(R.id.kategoriInput);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(PemasukanFragment.this.getContext(), R.array.spinnerPemasukan, R.layout.color_spinner_layout);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        String[] value = {"Deposito","Dividen","Gaji","Hibah","Investasi","Kupon","Lain-lain",
+                "Pengembalian Dana","Penghargaan","Penjualan","Penyewaan","Tabungan"};
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(value));
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(PemasukanFragment.this.getContext(),R.layout.style_spinner,arrayList);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        spinner.setAdapter(arrayAdapter);
 
-        editJumlah = view.findViewById(R.id.editTextNumberDecimal);
+        editJumlah = view.findViewById(R.id.editTextNumber);
         editKeterangan = view.findViewById(R.id.keteranganInput);
 
         simpanBtn = view.findViewById(R.id.simpanButton);

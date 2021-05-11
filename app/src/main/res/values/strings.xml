@@ -10,47 +10,4 @@
     <string name="jumlah">Jumlah</string>
     <string name="kategori">Kategori</string>
     <string name="simpan">Simpan</string>
-    <string-array name="spinnerPemasukan">
-        <item>Deposito</item>
-        <item>Dividen</item>
-        <item>Gaji</item>
-        <item>Hibah</item>
-        <item>Investasi</item>
-        <item>Kupon</item>
-        <item>Lain-lain</item>
-        <item>Pengembalian Dana</item>
-        <item>Penghargaan</item>
-        <item>Penjualan</item>
-        <item>Penyewaan</item>
-        <item>Tabungan</item>
-    </string-array>
-    <string-array name="spinnerPengeluaran">
-        <item>Asuransi</item>
-        <item>Bayi</item>
-        <item>Belanja</item>
-        <item>Buah-buahan</item>
-        <item>Cemilan</item>
-        <item>Elektronik</item>
-        <item>Hadiah</item>
-        <item>Hewan Peliharaan</item>
-        <item>Hiburan</item>
-        <item>Kantor</item>
-        <item>Kecantikan</item>
-        <item>Kesehatan</item>
-        <item>Lain-lain</item>
-        <item>Makanan</item>
-        <item>Mobil</item>
-        <item>Motor</item>
-        <item>Olahraga</item>
-        <item>Pajak</item>
-        <item>Pakaian</item>
-        <item>Pendidikan</item>
-        <item>Pulsa</item>
-        <item>Rokok</item>
-        <item>Rumah</item>
-        <item>Sosial</item>
-        <item>Tagihan</item>
-        <item>Taksi</item>
-        <item>Transportasi</item>
-    </string-array>
 </resources>
