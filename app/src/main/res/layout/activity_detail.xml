@@ -99,7 +99,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:text="TotalPengeluaran"
+                android:text="Total Pengeluaran"
                 android:layout_marginLeft="10sp"
                 android:paddingVertical="10dp"/>
 

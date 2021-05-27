@@ -138,7 +138,7 @@
                 android:padding="5dp"/>
 
             <EditText
-                android:id="@id/keteranganInput"
+                android:id="@+id/keteranganInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
